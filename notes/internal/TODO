@@ -16,3 +16,4 @@
 [ ] `info` command to list information about a specified package
 [ ] `config` command to provide an interface to edit the manifest file
 [ ] `registry` command to host a private registry
+[ ] Fix type issues
