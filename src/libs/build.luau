@@ -115,7 +115,7 @@ function build.build(mode: "dev"|"release"?, overrides: {[any]: any}?)
     b_config.lune_version = overrides.lune_version or b_config.lune_version or config.lune_version;
     b_config.name = overrides.name or b_config.name or manifest.name;
 
-    local bundled = bundler.bundle(manifest.main); -- do resource header
+    local bundled = bundler.bundle(manifest.main.bin or manifest.main); -- do resource header
     local bytecode = luau.compile(bundled, {
         optimizationLevel = b_config.optimisation_level,
         debugLevel = b_config.debug_level,

@@ -4,7 +4,7 @@ return {
         long = "epinephrine",
     },
     author = "Spearhead-Industries",
-    version = "0.1.0",
+    version = "0.1.1",
     lune_version = "0.8.5",
     colour_theme = {
         author = {"blue"},

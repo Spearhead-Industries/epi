@@ -50,6 +50,6 @@ return function()
     end
 
     print(pcall(function()
-        o_req(manifest.main); -- Consider converting to a lune run call. Issues with stdin however.
+        o_req(manifest.main.bin or manifest.main); -- Consider converting to a lune run call. Issues with stdin however.
     end));
 end

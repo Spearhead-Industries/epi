@@ -2,11 +2,11 @@ dependencies = []
 description = "Simple package manager for Luau"
 files = ["*"]
 keywords = [""]
-main = "./src/init.luau"
+main = { lib = "./src/api.luau", bin = "./src/init.luau" }
 name = "epinephrine"
 owner = "plainenglish"
 repository = "https://github.com/Spearhead-Industries/epinephrine.git"
-version = "0.1.0"
+version = "0.1.1"
 
 [build_config]
 name = "epi"

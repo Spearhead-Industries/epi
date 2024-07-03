@@ -34,7 +34,7 @@ export type BuildConfig = {
 export type PackageManifest = {
     name: string,
     version: string,
-    main: string,
+    main: string|{lib: string, bin: string},
     
     owner: string?,
     files: {string}?,

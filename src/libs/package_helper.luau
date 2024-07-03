@@ -188,7 +188,14 @@ function package_handler.install_package(identifier: string, options: InstallPac
         -- Add init --
         local has_init = fs.isFile(`{install_path}/init.luau`) or fs.isFile(`{install_path}/init.lua`);
         if not has_init and package_manifest.main then
-            fs.writeFile(`{install_path}/init.luau`, `return require("{package_manifest.main}")`);
+            local entrypoint;
+            if typeof(package_manifest.main) == "table" then
+                entrypoint = package_manifest.main.lib;
+            else
+                entrypoint = package_manifest.main; 
+            end
+            
+            fs.writeFile(`{install_path}/init.luau`, `return require("{entrypoint}")`);
         end
 
         -- Install Dependencies --
