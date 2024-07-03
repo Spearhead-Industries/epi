@@ -1,0 +1,16 @@
+dependencies = []
+description = "Simple package manager for Luau"
+files = ["*"]
+keywords = [""]
+main = "./src/init.luau"
+name = "epinephrine"
+owner = "plainenglish"
+repository = ""
+version = "0.1.0"
+
+[build_config]
+name = "epi"
+
+[build_config.release]
+debug_level = 0
+optimisation_level = 2

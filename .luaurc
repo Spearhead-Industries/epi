@@ -1,0 +1,6 @@
+{
+  "aliases": {
+    "pkg": "/.epinephrine/"
+  },
+  "languageMode": "strict"
+}
