@@ -121,8 +121,6 @@ function build.build(mode: "dev"|"release"?, overrides: {[any]: any}?)
         debugLevel = b_config.debug_level,
         coverageLevel = b_config.coverage_level,
     });
-
-    
     
     local target = b_config.target;
     local out_name = b_config.name;
