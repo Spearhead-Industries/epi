@@ -126,7 +126,6 @@ function build.build(mode: "dev"|"release"?, overrides: {[any]: any}?)
     
     local target = b_config.target;
     local out_name = b_config.name;
-    print(out_name)
 
     if not target or target == "dev" then
         local EXT = if sys.win then ".exe" else "";
