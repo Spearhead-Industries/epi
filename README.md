@@ -16,6 +16,10 @@ Epinephrine is a simple package manager for Luau, built on top of [Lune](https:/
 
 Epinephrine is not at a stable release; use with caution.
 
+### Why "Epinephrine"?
+
+It's a fun word to say.
+
 ## Installation
 
 No prerequisites are required to install epinephrine.
