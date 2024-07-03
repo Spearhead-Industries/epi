@@ -29,7 +29,7 @@ No prerequisites are required to install epinephrine.
 You can install epinephrine using [Aftman](https://github.com/LPGhatguy/aftman) with the following command:
 
 ```bash
-aftman add --global Spearhead-Industries/epinephrine
+aftman add --global Spearhead-Industries/epi
 ```
 
 ## Usage
