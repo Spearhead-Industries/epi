@@ -5,7 +5,7 @@ keywords = [""]
 main = "./src/init.luau"
 name = "epinephrine"
 owner = "plainenglish"
-repository = "https://github.com/Spearhead-Industries/epi.git"
+repository = "https://github.com/Spearhead-Industries/epinephrine.git"
 version = "0.1.0"
 
 [build_config]
