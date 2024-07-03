@@ -22,7 +22,7 @@ It's a fun word to say.
 
 ## Installation
 
-No prerequisites are required to install epinephrine.
+No prerequisites are required to install epinephrine, it was formerly called lpm (Luau Package Manager) but was renamed to avoid it being mistaken as official.
 
 ### Aftman
 
