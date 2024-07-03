@@ -11,6 +11,7 @@ api.commands = {
     ["run"] = require("./commands/run"),
     ["init"] = require("./commands/_init"),
     ["build"] = require("./commands/build"),
+    ["treeshake"] = require("./commands/treeshake"),
 };
 
 return api;
