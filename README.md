@@ -43,3 +43,4 @@ Commands:
 3. run
 4. build
 5. init
+6. treeshake
