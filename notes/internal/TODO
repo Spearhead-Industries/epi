@@ -1,0 +1,18 @@
+# Todo
+
+[ ] Scripts
+[ ] Test Runner
+[ ] Documentation
+[x] Prune command
+[ ] Proper dependency resolution
+[ ] Git submodule support
+[ ] Lockfiles
+[ ] Workspaces
+[ ] `version` command to bump package versions
+[ ] Rework CLI output
+[ ] Command to list available dependency updates
+[ ] Registry (local DB/D1)
+[ ] `ls` command to list installed packages (with dependencies if --all is specified)
+[ ] `info` command to list information about a specified package
+[ ] `config` command to provide an interface to edit the manifest file
+[ ] `registry` command to host a private registry
