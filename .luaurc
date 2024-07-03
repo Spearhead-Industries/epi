@@ -1,6 +1,6 @@
 {
   "aliases": {
-    "pkg": "/.epinephrine/"
+    "pkg": "./.epinephrine/"
   },
   "languageMode": "strict"
 }
