@@ -8,8 +8,27 @@ export type PackageData = {
     valid: false,
 };
 
+export type BuildTargets = 
+    "windows-x86_64"|
+    "linux-aarch64" | 
+    "macos-aarch64" |
+    "linux-x86_64"  |
+    "macos-x86_64"  |
+    "rbxm"          |
+    "dev"           |
+    "bytecode"      |
+    "bundled"       |
+    "all"           ;
+
 export type BuildConfig = {
-    resource_folder: string,
+    resource_folder: string?,
+    optimisation_level: number?,
+    coverage_level: number?,
+    debug_lvel: number?,
+    target: BuildTargets?,
+    zip: boolean?,
+    lune_version: string?,
+    name: string?,
 };
 
 export type PackageManifest = {
@@ -29,7 +48,7 @@ export type PackageManifest = {
     arch: {string}?,
     os: {string}?,
     runtimes: {string}?,
-    build_config: (BuildConfig|{dev: BuildConfig, release: BuildConfig})?,
+    build_config: (BuildConfig & {dev: BuildConfig, release: BuildConfig})?,
 };
 
 export type Semver = {
