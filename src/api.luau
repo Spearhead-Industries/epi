@@ -5,6 +5,15 @@ sys.ensure_dir_exists(`{sys.global_dir}/binaries`);
 
 local api = {};
 
+api.command_aliases = {
+    install  = { "i" },
+    uninstall = { "ui" },
+    run = { "r" },
+    ["run-script"] = { "rs" },
+    build = { "b" },
+    treeshake = { "ts" },
+};
+
 api.commands = {
     ["install"] = require("./commands/install"),
     ["uninstall"] = require("./commands/uninstall"),
