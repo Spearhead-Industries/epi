@@ -2,15 +2,18 @@ local process = require("@lune/process");
 local output = require("../libs/output");
 local argparse = require("../libs/argparse");
 local build = require("../libs/build");
+local script_manager = require("../libs/script_manager");
 
 return function()
-    local args = argparse.parse({
-        argparse.FlagArgument({"r", "release"})
-    });
-
-    local mode = if args.get_flag("r") then "release" else "dev";
-
-    build.build(mode :: any, {
-        
-    });
+    script_manager.run_hook("build", function()
+        local args = argparse.parse({
+            argparse.FlagArgument({"r", "release"})
+        });
+    
+        local mode = if args.get_flag("r") then "release" else "dev";
+    
+        build.build(mode :: any, {
+            
+        });
+    end);
 end

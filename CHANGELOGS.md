@@ -4,8 +4,9 @@
 
 ### Added
 
+- Added `run-script` command to run .luau scripts within the `./scripts/` folder.
 - Added `list` command to list all currently installed packages.
-- Command aliases, (i.e ls for list, rs for run-script)
+- Command aliases, i.e ls for list, rs for run-script.
 
 ### Changed
 
