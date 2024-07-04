@@ -1,6 +1,6 @@
 {
   "luau-lsp.require.directoryAliases": {
-    "@lune/": "~/.lune/.typedefs/0.8.5/",
+    "@lune/": "~/.lune/.typedefs/0.8.6/",
     "@pkg/": "./.epinephrine/"
   },
   "luau-lsp.require.mode": "relativeToFile"

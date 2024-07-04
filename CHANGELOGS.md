@@ -1,5 +1,12 @@
 # Changelogs
 
+## [0.1.2] - 04/07/2024
+
+### Changed
+
+- Bumped Lune version from 0.8.5 to 0.8.6.
+- Replaced hashlib use with the Lune `serde` API.
+
 ## [0.1.1] - 03/07/2024
 
 ### Added

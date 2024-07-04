@@ -3,7 +3,7 @@
 local fs = require("@lune/fs");
 local sys = require("./sys");
 local output = require("./output");
-local hashlib = require("../dependencies/hashlib");
+local serde = require("@lune/serde");
 local bundler = {};
 
 local BUNDLE_HEADER = [[
@@ -49,7 +49,7 @@ function bundler.bundle(entrypoint_path: string, extra_headers: {string}?): stri
             end
 
             
-            local hash = hashlib.md5(d_path);
+            local hash = serde.hash("md5", d_path);
             require_hashes[hash] = d_path;
             return `__EPI_IM("{hash}")`;
         end);
@@ -82,7 +82,7 @@ function bundler.bundle(entrypoint_path: string, extra_headers: {string}?): stri
             if not data then
                 return
             end
-            local hash = hashlib.md5(data.source);
+            local hash = serde.hash("md5", data.source);
 
             if not dependencies[hash] then
                 dependencies[hash] = data;
