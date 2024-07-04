@@ -10,6 +10,7 @@ api.command_aliases = {
     uninstall = { "ui" },
     run = { "r" },
     ["run-script"] = { "rs" },
+    list = { "ls" },
     build = { "b" },
     treeshake = { "ts" },
 };
@@ -21,6 +22,8 @@ api.commands = {
     ["init"] = require("./commands/_init"),
     ["build"] = require("./commands/build"),
     ["treeshake"] = require("./commands/treeshake"),
+    ["run-script"] = require("./commands/run_script"),
+    ["list"] = require("./commands/list"),
 };
 
 return api;

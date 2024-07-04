@@ -14,6 +14,13 @@ function package_handler.is_package_installed(name: string): boolean
     return fs.isDir(`{sys.local_dir}/{name:split("/")[1]}`) and fs.isDir(`{sys.local_dir}/{name}`);
 end
 
+function package_handler.get_root_dependencies()
+    local read_ok, manifest, commit = manifest_helper.read(true);
+    assert(read_ok and manifest and commit, "Package manifest not found");
+
+    return manifest.dependencies or {};
+end
+
 function package_handler.get_all_dependencies()
     local read_ok, manifest, commit = manifest_helper.read(true);
     assert(read_ok and manifest and commit, "Package manifest not found");
