@@ -4,7 +4,7 @@ keywords = [""]
 name = "epinephrine"
 owner = "plainenglish"
 repository = "https://github.com/Spearhead-Industries/epinephrine.git"
-version = "0.1.2"
+version = "0.1.3"
 
 [build_config]
 name = "epi"
