@@ -1,5 +1,3 @@
-local process = require("@lune/process");
-local output = require("../libs/output");
 local argparse = require("../libs/argparse");
 local build = require("../libs/build");
 local script_manager = require("../libs/script_manager");

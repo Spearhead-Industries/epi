@@ -49,6 +49,8 @@ export type PackageManifest = {
     os: {string}?,
     runtimes: {string}?,
     build_config: (BuildConfig & {dev: BuildConfig, release: BuildConfig})?,
+    scripts: string?, -- wip
+    tests: string?,
 };
 
 export type Semver = {

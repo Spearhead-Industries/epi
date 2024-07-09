@@ -37,6 +37,18 @@ end
 local ERROR_HEADER = output.format(config.colour_theme.error :: any, "error: ");
 local WARN_HEADER = output.format(config.colour_theme.warn :: any, "warn: ");
 
+function output.write_removable(message: string): ()->()
+    if _G.EPI_OUTPUT_MODE == "CLI" then
+        stdio.write(LEADER .. message);
+    end
+    
+    return function()
+        stdio.write(("\b"):rep(#(LEADER .. message)));
+        stdio.write((" "):rep(#(LEADER .. message)));
+        stdio.write(("\b"):rep(#(LEADER .. message)));
+    end
+end
+
 function output.write(message: string)
     if _G.EPI_OUTPUT_MODE == "CLI" then
         stdio.write(LEADER .. message .. "\n");
@@ -80,6 +92,7 @@ function output.header()
 end
 
 if _G.EPI_OUTPUT_MODE == "CLI" then
+    _G.EPI_OLD_ASSERT = assert;
     assert = output.assert;
 end
 

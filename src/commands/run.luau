@@ -1,11 +1,7 @@
 --!nocheck
 
-local process = require("@lune/process");
-local output = require("../libs/output");
 local manifest_helper = require("../libs/manifest_helper");
 local script_manager = require("../libs/script_manager");
-
-local sys = require("../libs/sys");
 
 return function()
     script_manager.run_hook("run", function()

@@ -24,6 +24,7 @@ api.commands = {
     ["treeshake"] = require("./commands/treeshake"),
     ["run-script"] = require("./commands/run_script"),
     ["list"] = require("./commands/list"),
+    ["test"] = require("./commands/test"),
 };
 
 return api;

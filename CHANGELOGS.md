@@ -1,9 +1,10 @@
 # Changelogs
 
-## [0.1.2] - 04/07/2024
+## [0.1.2] - 09/07/2024
 
 ### Added
 
+- Added `test` command to run simple automated tests.
 - Added `run-script` command to run .luau scripts within the `./scripts/` folder.
 - Added `list` command to list all currently installed packages.
 - Command aliases, i.e ls for list, rs for run-script.
