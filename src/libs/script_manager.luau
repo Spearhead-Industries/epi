@@ -46,7 +46,9 @@ function script_manager.execute_file(file: string)
         end
     end
 
-    o_req(file); -- Consider converting to a lune run call. Issues with stdin however.
+    assert = _G.EPI_OLD_ASSERT;
+    pcall(o_req, file); -- Consider converting to a lune run call. Issues with stdin however.
+    assert = output.assert;
 end
 
 function script_manager.get_scripts(include_hooks: boolean?): {string}

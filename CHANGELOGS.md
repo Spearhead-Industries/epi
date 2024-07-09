@@ -1,5 +1,12 @@
 # Changelogs
 
+## [0.1.3] - 09/07/2024
+
+### Fixed
+
+- Fixed tracebacks including epinephrine.
+- Fixed `assert` being overwritten in ran scripts.
+
 ## [0.1.2] - 09/07/2024
 
 ### Added
