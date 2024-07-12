@@ -50,7 +50,7 @@ function test_runner.run_tests()
         else
             pass = false;
             remove();
-            err = err:gsub("%[string \"luau%.load%(%.%.%.%)\"]:%d-: ", "");
+            err = tostring(err):gsub("%[string \"luau%.load%(%.%.%.%)\"]:%d-: ", "");
             output.write(`{FAIL_PREFIX} {message} - {err}`);
         end
     end

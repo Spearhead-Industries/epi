@@ -23,6 +23,7 @@ function script_manager.execute_file(file: string)
 
     local o_req;
     o_req = require;
+    
     local function req(path: string)
         local cwd = debug.info(3, "s"):match("%[string \"(.-)\"");
         if path:match("^@(.-)$") then
@@ -33,7 +34,6 @@ function script_manager.execute_file(file: string)
             table.remove(src, #src);
             src = table.concat(src, "/") .. "/";
             path = sys.normalise_path(src..path);
-            print(path); 
         end
 
         return o_req(path);
