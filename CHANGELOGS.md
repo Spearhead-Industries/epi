@@ -1,5 +1,11 @@
 # Changelogs
 
+## [0.1.4] - 09/07/2024
+
+### Fixed
+
+- Fixed require issue.
+
 ## [0.1.3] - 09/07/2024
 
 ### Fixed
