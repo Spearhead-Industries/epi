@@ -18,3 +18,5 @@
 [ ] `config` command to provide an interface to edit the manifest file
 [ ] `registry` command to host a private registry
 [ ] Fix type issues
+[ ] Type re-exports
+[ ] Relative paths in tests
