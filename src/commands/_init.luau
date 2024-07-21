@@ -55,7 +55,7 @@ return function()
 
     local luaurc = serde.decode("json", fs.readFile("./.luaurc"));
     luaurc.aliases = luaurc.aliases or {};
-    luaurc.aliases["pkg"] = `{sys.local_dir}/packages/`;
+    luaurc.aliases["pkg"] = `{sys.local_dir}/`;
     fs.writeFile("./.luaurc", serde.encode("json", luaurc, true))
     
     if not fs.isDir("./.vscode") then
@@ -68,7 +68,7 @@ return function()
     
     local vscode_settings = serde.decode("json", fs.readFile("./.vscode/settings.json"));
     vscode_settings["luau-lsp.require.directoryAliases"] = vscode_settings["luau-lsp.require.directoryAliases"] or {};
-    vscode_settings["luau-lsp.require.directoryAliases"]["@pkg/"] = sys.local_dir;
+    vscode_settings["luau-lsp.require.directoryAliases"]["@pkg/"] = `{sys.local_dir}/`;
     vscode_settings["luau-lsp.require.directoryAliases"]["@lune/"] = "~/.lune/.typedefs/0.8.5/";
     vscode_settings["luau-lsp.require.mode"] = "relativeToFile";
     fs.writeFile("./.vscode/settings.json", serde.encode("json", vscode_settings, true));

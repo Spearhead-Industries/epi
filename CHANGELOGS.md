@@ -1,5 +1,19 @@
 # Changelogs
 
+## [0.1.5] -
+
+### Changed
+
+- New Bundler
+  - The bundler now uses jackdotink/luaup to find require calls instead of gsub, meaning comments and strings are no longer falsely converted.
+  - All string types, except for multiline strings, can be used. This includes interpolated strings provided they are 'simple', i.e contains no interpolated sections.
+  - Files are now identified by the source SHA1 hash, rather than MD5.
+  - Aliases now apply correctly regardless of whether the `.luaurc` entry has a trailing slash or not.
+
+### Fixed
+
+- Fixed `init` command specifying .luaurc incorrectly.
+
 ## [0.1.4] - 12/07/2024
 
 ### Fixed

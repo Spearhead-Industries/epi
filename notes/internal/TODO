@@ -1,5 +1,9 @@
 # Todo
 
+[ ] "Injected" globals containing package information
+[ ] GitHub releases as registry
+[ ] Bundler improvements
+[ ] Watch command
 [ ] Flags in build command
 [x] Scripts
 [ ] Test Runner
